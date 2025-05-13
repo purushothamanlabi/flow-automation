@@ -1,0 +1,128 @@
+/* Integration section styles */
+.integration-scrolling-row {
+  display: flex;
+  width: fit-content;
+}
+
+.integration-scrolling-row-left {
+  animation: integration-scrollLeft 70s linear infinite;
+}
+
+.integration-scrolling-row-right {
+  animation: integration-scrollRight 70s linear infinite;
+}
+
+@keyframes integration-scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 10)); }
+}
+
+@keyframes integration-scrollRight {
+  0% { transform: translateX(calc(-250px * 10)); }
+  100% { transform: translateX(0); }
+}
+
+.integration-logos-container {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.integration-logos-container:before,
+.integration-logos-container:after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  top: 0;
+}
+
+.integration-logos-container:before {
+  left: 0;
+  background: linear-gradient(to right, #25004b, transparent);
+}
+
+.integration-logos-container:after {
+  right: 0;
+  background: linear-gradient(to left, #25004b, transparent);
+}
+
+.integration-section {
+  width: 100%;
+  background-color: #25004b;
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.integration-heading {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.integration-highlight {
+  color: #ff7f50;
+  font-weight: 800;
+}
+
+.integration-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.integration-logo-inner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integration-logo-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .integration-heading {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  
+  .integration-logo {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+  
+  .integration-logo-inner {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .integration-logo-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Remove all Features Section Styles */
