@@ -777,7 +777,7 @@ const Header = () => {
                           Make across your business
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 mb-8">
-                          {solutionBusinessAreas.map((area, i) => (
+                          {solutionBusinessAreas.map((area) => (
                             <div key={area.title} className="flex items-start">
                               {area.icon}
                               <div>
@@ -795,7 +795,7 @@ const Header = () => {
                           Popular automations
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
-                          {solutionAutomations.map((auto, i) => (
+                          {solutionAutomations.map((auto) => (
                             <div key={auto.title}>
                               <div className="font-bold text-base mb-1">
                                 {auto.title}
@@ -838,7 +838,7 @@ const Header = () => {
                         onMouseEnter={() => setOpenDropdown(item.label)}
                         onMouseLeave={() => setOpenDropdown(null)}
                       >
-                        {item.dropdown.map((drop, i) => (
+                        {item.dropdown.map((drop, _i) => (
                           <a
                             key={drop.label}
                             href={drop.href}
