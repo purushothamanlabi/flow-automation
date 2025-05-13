@@ -2,6 +2,7 @@ import "./LandingPage.css";
 import React, { useState } from "react";
 import image1 from "./../assets/2.webp";
 import image2 from "./../assets/ai.webp";
+import reptixLogo from "./../assets/Reptix.ai.png"; // Import the Reptix logo
 // Define types for menu and dropdowns
 interface DropdownItem {
   label: string;
@@ -643,8 +644,8 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="max-w-2xl">
             <div className="mb-8">
-              <span className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">
-                SCALE AI AGENTS WITH ZAPIER
+              <span className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+                Scale AI Agents with Reptix
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
@@ -655,7 +656,7 @@ const HeroSection = () => {
               complexity. Just results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+              <button className="bg-[#7B68EE] hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                 Start free with email
               </button>
               <button className="flex items-center justify-center gap-3 bg-white border-2 border-gray-200 hover:border-gray-300 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 text-gray-700">
@@ -688,18 +689,18 @@ const HeroSection = () => {
 
           {/* Right Illustration */}
           <div className="relative">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-orange-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="relative">
               <div className="relative z-10 flex items-center justify-center">
-                {/* Orange Circle with Connection Lines */}
+                {/* Light Blue Circle with Connection Lines */}
                 <div className="relative">
-                  <div className="w-64 h-64 bg-orange-500 rounded-full"></div>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-400 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
+                  <div className="w-64 h-64 bg-blue-500 rounded-full"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
                   <div className="absolute bottom-0 right-0 w-24 h-24 bg-white border-4 border-gray-100 rounded shadow-lg transform translate-x-1/3 translate-y-1/3"></div>
                   {/* Small decorative elements */}
-                  <div className="absolute top-0 left-0 w-2 h-2 bg-orange-300 rounded-full"></div>
-                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-orange-300 rounded-full"></div>
-                  <div className="absolute top-1/2 right-0 w-2 h-2 bg-orange-300 rounded-full"></div>
+                  <div className="absolute top-0 left-0 w-2 h-2 bg-blue-300 rounded-full"></div>
+                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-blue-300 rounded-full"></div>
+                  <div className="absolute top-1/2 right-0 w-2 h-2 bg-blue-300 rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -712,35 +713,22 @@ const HeroSection = () => {
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed top-7 left-0 right-0 bg-transparent z-50">
+    <nav className="fixed top-4 sm:top-7 left-0 right-0 bg-transparent z-50">
       <div className="max-w-[1400px] mx-auto px-4">
-        <div className="flex items-center justify-between bg-white rounded-full border border-gray-200 shadow-sm px-3 py-2">
-          {/* Logo */}
-          <div className="flex items-center space-x-2 px-3">
-            <span className="font-extrabold text-xl tracking-tight flex items-center gap-2">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="36" height="36" rx="8" fill="#7B68EE" />
-                <rect x="6" y="8" width="6" height="20" rx="3" fill="#fff" />
-                <rect x="15" y="8" width="6" height="20" rx="3" fill="#fff" />
-                <rect x="24" y="8" width="6" height="20" rx="3" fill="#fff" />
-              </svg>
-              <div className="flex flex-col text-left">
-                <span className="text-[#25004b] text-lg font-bold">ClickUp</span>
-                <span className="text-gray-500 text-[10px] leading-none -mt-1">The everything app, for work.</span>
-              </div>
+        <div className="flex items-center justify-between bg-white rounded-full border border-gray-200 shadow-sm px-3 py-1.5 sm:py-2">
+          {/* Logo - Updated to use Reptix logo */}
+          <div className="flex items-center">
+            <span className="font-extrabold text-sm sm:text-xl tracking-tight flex items-center gap-1 sm:gap-2">
+              <img src={reptixLogo} alt="Reptix.ai" className="h-8 sm:h-10" />
             </span>
           </div>
 
-          {/* Center Menu */}
-          <div className="flex-1 flex justify-center">
-            <ul className="hidden lg:flex items-center space-x-8 font-medium">
+          {/* Center Menu - Desktop */}
+          <div className="hidden lg:flex flex-1 justify-center">
+            <ul className="flex items-center space-x-8 font-medium">
               {menu.map((item) => (
                 <li key={item.label} className="relative group">
                   {item.label === "Solutions" ? (
@@ -872,26 +860,97 @@ const Header = () => {
             </ul>
           </div>
 
+          {/* Hamburger Menu Button - Mobile */}
+          <button 
+            className="lg:hidden ml-auto mr-2 p-1.5 focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <svg 
+              className="w-6 h-6 text-gray-700" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              {mobileMenuOpen ? (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M6 18L18 6M6 6l12 12" 
+                />
+              ) : (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M4 6h16M4 12h16M4 18h16" 
+                />
+              )}
+            </svg>
+          </button>
+
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 sm:gap-3">
             <a
               href="#"
-              className="hidden md:inline-block text-gray-600 hover:text-gray-900 font-medium transition-colors bg-white rounded-full px-4 py-2"
+              className="hidden md:inline-block text-gray-600 hover:text-gray-900 font-medium transition-colors bg-white rounded-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm"
             >
               Contact Sales
             </a>
             <a
               href="#"
-              className="text-gray-700 font-medium hover:text-gray-900 transition-colors bg-white rounded-full px-4 py-2"
+              className="text-gray-700 font-medium hover:text-gray-900 transition-colors bg-white rounded-full px-2 sm:px-4 py-1.5 sm:py-2 text-sm"
             >
               Log In
             </a>
             <a
               href="#"
-              className="bg-[#7B68EE] hover:bg-[#6A5ACD] text-white font-medium px-4 py-2 rounded-full transition-colors"
+              className="bg-[#7B68EE] hover:bg-[#6A5ACD] text-white font-medium px-2 sm:px-4 py-1.5 sm:py-2 rounded-full transition-colors text-sm"
             >
               Sign Up
             </a>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`lg:hidden bg-white rounded-xl border border-gray-200 shadow-lg mt-2 transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4 py-6 divide-y divide-gray-100">
+            <ul className="mb-6 space-y-4">
+              {menu.map((item) => (
+                <li key={item.label}>
+                  {item.dropdown ? (
+                    <div className="mb-2">
+                      <div className="font-semibold text-gray-800 mb-2">{item.label}</div>
+                      <ul className="ml-4 space-y-2">
+                        {(item.label === "Solutions" 
+                          ? [...solutionBusinessAreas.map(area => ({ label: area.title, href: "#" }))] 
+                          : item.dropdown
+                        ).map((subItem, idx) => (
+                          <li key={idx}>
+                            <a 
+                              href={typeof subItem === 'string' ? '#' : subItem.href} 
+                              className="text-gray-600 hover:text-gray-900"
+                            >
+                              {typeof subItem === 'string' ? subItem : subItem.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <a href={item.href} className="font-semibold text-gray-800">
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+            
+            <div className="pt-6 flex flex-col space-y-3">
+              <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">
+                Contact Sales
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1278,16 +1337,215 @@ const Footer = () => {
   );
 };
 
+// Adding placeholder images for preview component
+// Note: Replace these with actual screenshots when available
+const previewImages = {
+  calendar: image1,
+  tasks: image2,
+  kanban: image1,
+  projects: image2,
+  notes: image1
+};
+
+const PreviewImages = () => {
+  const [activeView, setActiveView] = useState<'calendar' | 'tasks' | 'kanban' | 'projects' | 'notes'>('calendar');
+
+  const views = [
+    { id: 'calendar', label: 'Calendar planner', icon: (
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    )},
+    { id: 'tasks', label: 'Task list', icon: (
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    )},
+    { id: 'kanban', label: 'Kanban board', icon: (
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v12a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z" />
+      </svg>
+    )},
+    { id: 'projects', label: 'Projects', icon: (
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+      </svg>
+    )},
+    { id: 'notes', label: 'Notes', icon: (
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    )}
+  ];
+
+  return (
+    <section className="bg-gray-50 py-24 px-4 overflow-hidden relative">
+      {/* Large blue gradient backgrounds */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-b from-blue-200/40 to-blue-100/10 rounded-full blur-3xl -z-10 transform translate-x-1/4 -translate-y-1/4"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-t from-blue-200/40 to-blue-100/10 rounded-full blur-3xl -z-10 transform -translate-x-1/4 translate-y-1/4"></div>
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4">One platform for all your work</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Manage tasks, collaborate on docs, track goals, and streamline your workflow—all in one place.
+          </p>
+        </div>
+
+        {/* Navigation Tabs */}
+        <div className="flex justify-center mb-10 relative z-10">
+          <div className="bg-white rounded-full shadow-md p-1.5 inline-flex">
+            {views.map((view) => (
+              <button
+                key={view.id}
+                onClick={() => setActiveView(view.id as any)}
+                className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  activeView === view.id
+                    ? 'bg-[#7B68EE] text-white'
+                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                {view.icon}
+                {view.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Preview Image Area - Updated with simple border instead of device frame */}
+        <div className="relative mx-auto max-w-6xl">
+          {/* Remove the old decorative elements since we have the new larger ones */}
+          
+          {/* App interface with simple border */}
+          <div className="relative overflow-hidden bg-white rounded-lg border border-gray-200 shadow-lg">
+            {/* Browser header with mac-style dots and Chrome-like tabs */}
+            <div className="bg-[#f1f3f4] border-b border-gray-200">
+              {/* Mac-style window controls */}
+              <div className="flex items-center p-2">
+                <div className="flex space-x-1.5 mr-4">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                
+                {/* Chrome-style tabs */}
+                <div className="flex">
+                  <div className={`relative flex items-center px-4 py-2 bg-white rounded-t-lg border-t border-l border-r border-gray-200 text-sm font-medium text-gray-800 min-w-[180px]`}>
+                    <span className="truncate">ClickUp | Dashboard</span>
+                    <button className="ml-2 text-gray-400 hover:text-gray-600">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="flex items-center px-4 py-2 bg-[#dee1e6] rounded-t-lg border-t border-l border-r border-gray-200 text-sm font-medium text-gray-600 ml-1 min-w-[180px] opacity-80">
+                    <span className="truncate">ClickUp | Projects</span>
+                  </div>
+                </div>
+                
+                {/* Browser controls */}
+                <div className="ml-auto flex items-center space-x-3 mr-2">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v13a2 2 0 01-2 2H6a2 2 0 01-2-2V8m16 0H4" />
+                  </svg>
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                  </svg>
+                </div>
+              </div>
+              
+              {/* URL bar */}
+              <div className="flex items-center px-3 py-1.5 bg-white">
+                <div className="flex items-center space-x-2 mr-2 text-gray-500">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </div>
+                <div className="flex-1 bg-[#f1f3f4] rounded-full px-3 py-1 text-sm text-gray-800 flex items-center">
+                  <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                  </svg>
+                  <span>app.clickup.com/{activeView}</span>
+                </div>
+                <div className="flex items-center space-x-3 ml-2 text-gray-500">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                  </svg>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Container */}
+            <div className="overflow-hidden bg-white">
+              <img 
+                src={previewImages[activeView]} 
+                alt={`${activeView} view`} 
+                className="w-full object-contain max-h-[600px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Time Management</h3>
+            <p className="text-gray-600">Plan your schedule, set deadlines, and track progress with our intuitive interface.</p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Team Collaboration</h3>
+            <p className="text-gray-600">Work together seamlessly with shared projects, tasks and real-time updates.</p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Progress Tracking</h3>
+            <p className="text-gray-600">Monitor project progress with customizable dashboards and detailed analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const LandingPage = () => {
   return (
     <>
       <Header />
       <HeroSection />
+      <PreviewImages />
       <IntegrationsSection />
       <FeaturesSection />
       <PricingSection />
-      <TrialRequestSection />
       <Fact />
+      <TrialRequestSection />
       <Footer />
     </>
   );
