@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import image1 from "./../assets/2.webp";
 import image2 from "./../assets/ai.webp";
 import { motion, AnimatePresence } from "framer-motion"; // Import motion and AnimatePresence from framer-motion
-
+import { Routes as AppRoutes } from "../util/Routes";
+import { useNavigate } from "react-router-dom";
 // Define types for menu and dropdowns
 interface DropdownItem {
   label: string;
@@ -807,7 +808,7 @@ const HeroSection = () => {
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <nav className="fixed top-4 sm:top-7 left-0 right-0 bg-transparent z-50">
       <div className="max-w-[1200px] h-16 mx-auto px-4">
@@ -937,7 +938,7 @@ const Header = () => {
               Log in
             </a>
             <a
-              href="#"
+              onClick={() => navigate(AppRoutes.Register)}
               className="bg-[#2e0052] hover:bg-[#3a0065] text-white font-medium text-sm px-5 py-2 rounded-full transition-colors flex items-center gap-2"
             >
               Sign up
@@ -997,7 +998,7 @@ const Header = () => {
                 Log in
               </a>
               <a
-                href="#"
+                onClick={() => navigate(AppRoutes.Register)}
                 className="bg-[#2e0052] hover:bg-[#3a0065] text-white font-medium text-sm px-5 py-2 rounded-full transition-colors flex items-center justify-center gap-2"
               >
                 Sign up
