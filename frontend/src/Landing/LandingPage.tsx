@@ -858,7 +858,7 @@ const Header = () => {
                           {item.label.toUpperCase()}
                         </p>
                         <div className="space-y-4">
-                          {item.dropdown.map((drop, idx) => (
+                          {item.dropdown.map((drop, _idx) => (
                             <a
                               key={drop.label}
                               href={drop.href}
@@ -958,8 +958,8 @@ const Header = () => {
                     <div>
                       <div className="font-semibold text-gray-800 mb-3">{item.label}</div>
                       <ul className="space-y-4 ml-2">
-                        {item.dropdown.map((drop, idx) => (
-                          <li key={idx}>
+                        {item.dropdown.map((drop, _idx) => (
+                          <li key={_idx}>
                             <a 
                               href={drop.href} 
                               className="flex items-start py-2"
