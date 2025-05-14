@@ -2,7 +2,6 @@ import "./LandingPage.css";
 import React, { useState } from "react";
 import image1 from "./../assets/2.webp";
 import image2 from "./../assets/ai.webp";
-import reptixLogo from "./../assets/Reptix.ai.png"; // Import the Reptix logo
 import { motion, AnimatePresence } from "framer-motion"; // Import motion and AnimatePresence from framer-motion
 
 // Define types for menu and dropdowns
@@ -109,212 +108,6 @@ const menu: MenuItem[] = [
     ],
   },
   { label: "Pricing", href: "#" },
-];
-
-const solutionBusinessAreas: {
-  icon: React.ReactNode;
-  title: string;
-  desc: string;
-}[] = [
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <rect
-          x="3"
-          y="6"
-          width="18"
-          height="12"
-          rx="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-    title: "Marketing",
-    desc: "Drive faster growth with marketing...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M3 17l6-6 4 4 8-8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path d="M14 7h7v7" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Sales",
-    desc: "Level up your sales cycle to close more...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Operations",
-    desc: "Get teams and tools working together...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-    title: "Customer Experience",
-    desc: "Take better care of customers with...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <rect
-          x="2"
-          y="7"
-          width="20"
-          height="14"
-          rx="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path d="M16 3v4M8 3v4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Finance",
-    desc: "Manage time as well as you manage...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <rect
-          x="3"
-          y="4"
-          width="18"
-          height="16"
-          rx="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path d="M16 2v4M8 2v4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Information Technology",
-    desc: "Efficiently scale and control your IT...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M8 14s1.5 2 4 2 4-2 4-2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <circle cx="9" cy="10" r="1" />
-        <circle cx="15" cy="10" r="1" />
-      </svg>
-    ),
-    title: "People",
-    desc: "Get your HR processes running...",
-  },
-  {
-    icon: (
-      <svg
-        className="w-7 h-7 text-[#25004b] mr-3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path d="M8 12h8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    title: "Workplace Productivity",
-    desc: "Automate busy work to focus on what...",
-  },
-];
-
-const solutionAutomations: { title: string; desc: string }[] = [
-  { title: "Social Media Posting", desc: "More engagement, less effort" },
-  { title: "Lead Management", desc: "Automate for more conversions" },
-  { title: "Invoicing", desc: "Save time on invoicing and billing" },
-  { title: "Contracting", desc: "Automate and make deals faster" },
-  { title: "Email Marketing", desc: "Increase your email conversions" },
-  { title: "Content Creation", desc: "Generate high quality content with AI" },
 ];
 
 // Create more realistic integration logos for debugging
@@ -1960,13 +1753,13 @@ const ReviewsSection = () => {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
             >
-              {testimonialSets[currentPage].map((testimonial, index) => (
+              {testimonialSets[currentPage].map((testimonial, _index) => (
                 <motion.div 
-                  key={`${currentPage}-${index}`}
+                  key={`${currentPage}-${_index}`}
                   className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-[450px] flex flex-col"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: _index * 0.1 }}
                 >
                   <div className="flex items-center mb-4">
                     <img 
