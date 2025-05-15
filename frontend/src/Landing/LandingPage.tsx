@@ -149,7 +149,7 @@ const bottomLogos = [
 
 // Remove the inline style block since CSS is now in LandingPage.css
 const IntegrationsSection = () => (
-  <section className="integration-section">
+  <section className="integration-section max-w-screen mx-auto">
     <div className="max-w-5xl mx-auto text-center mb-16">
       <h2 className="integration-heading mb-4">
         Plug AI into your own data <span className="text-white">&</span>
@@ -591,19 +591,20 @@ const PricingSection = () => {
   );
 };
 
+
 const TrialRequestSection = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="relative overflow-hidden bg-gradient-to-br from-black to-[#2a0942] rounded-2xl shadow-2xl border border-gray-800">
+    <section className="bg-[#25004b] py-16 w-full">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden w-full bg-[#25004b] rounded-2xl">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ff1fbf_0%,_transparent_60%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#7928ca_0%,_transparent_60%)]"></div>
           </div>
 
-          <div className="relative grid lg:grid-cols-2 gap-8 items-center p-6 sm:p-8 lg:p-12">
+          <div className="relative w-full grid lg:grid-cols-2 gap-8 items-center p-6 sm:p-8 lg:p-12">
             {/* Left Content */}
-            <div className="max-w-xl">
+            <div className="w-full">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">
                 Supercharge your productivity
               </h2>
@@ -700,10 +701,13 @@ const TrialRequestSection = () => {
   );
 };
 
+
+
+
 const HeroSection = () => {
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 min-h-screen sm:px-6 lg:px-8 py-24 flex items-center justify-center">
+    <section className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex items-center justify-center">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="max-w-2xl mx-auto text-center lg:text-left">
@@ -714,7 +718,7 @@ const HeroSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="inline-block bg-[rgb(255,31,191,0.1)] text-[rgb(255,31,191)] px-4 py-2 rounded-full text-sm font-semibold">
                 Scale AI Agents with Reptix
               </span>
             </motion.div>
@@ -744,7 +748,7 @@ const HeroSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <button className="bg-[#7B68EE] hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+              <button className="bg-[rgb(255,31,191)] hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                 Start free with email
               </button>
               <button className="flex items-center justify-center gap-3 bg-white border-2 border-gray-200 hover:border-gray-300 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 text-gray-700">
@@ -783,18 +787,18 @@ const HeroSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-[rgb(255,31,191,0.1)] rounded-full blur-3xl"></div>
             <div className="relative">
               <div className="relative z-10 flex items-center justify-center">
                 {/* Light Blue Circle with Connection Lines */}
                 <div className="relative">
-                  <div className="w-64 h-64 bg-blue-500 rounded-full"></div>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
+                  <div className="w-64 h-64 bg-[rgb(255,31,191)] rounded-full"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[rgb(255,31,191,0.8)] rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
                   <div className="absolute bottom-0 right-0 w-24 h-24 bg-white border-4 border-gray-100 rounded shadow-lg transform translate-x-1/3 translate-y-1/3"></div>
                   {/* Small decorative elements */}
-                  <div className="absolute top-0 left-0 w-2 h-2 bg-blue-300 rounded-full"></div>
-                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-blue-300 rounded-full"></div>
-                  <div className="absolute top-1/2 right-0 w-2 h-2 bg-blue-300 rounded-full"></div>
+                  <div className="absolute top-0 left-0 w-2 h-2 bg-[rgb(255,31,191,0.6)] rounded-full"></div>
+                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-[rgb(255,31,191,0.6)] rounded-full"></div>
+                  <div className="absolute top-1/2 right-0 w-2 h-2 bg-[rgb(255,31,191,0.6)] rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -804,6 +808,10 @@ const HeroSection = () => {
     </section>
   );
 };
+
+
+
+
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -1018,7 +1026,7 @@ const Footer = () => {
   return (
     <>
       {/* Landing Page Footer section */}
-      <section className="min-h-screen flex flex-col bg-[#25004b] text-white">
+      <section className=" flex flex-col bg-[#25004b] text-white">
         <header className="flex flex-col items-center justify-center flex-1 py-16 px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
             Realize your business's full potential
@@ -1842,6 +1850,325 @@ const ReviewsSection = () => {
   );
 };
 
+const CommentsSection = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      name: 'sam',
+      date: '05/14/2025',
+      text: "it's nice and really good",
+    }
+  ]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (name && email && comment) {
+      const newComment = {
+        id: comments.length + 1,
+        name,
+        date: new Date().toLocaleDateString(),
+        text: comment,
+      };
+      setComments([...comments, newComment]);
+      setName('');
+      setEmail('');
+      setComment('');
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.ctrlKey && e.key === 'Enter') {
+      handleSubmit(e);
+    }
+  };
+
+  return (
+    <section className="py-16 px-4 bg-[#f0f4ff]">
+      <div className="max-w-3xl mx-auto">
+        <motion.h2 
+          className="text-4xl font-bold mb-6 text-gray-900"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Comments and reviews
+        </motion.h2>
+        
+        <motion.p 
+          className="mb-6 text-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Share your experience with Lunacy. We don't remove anything but spam. For
+          questions, reports, and features, <a href="#" className="text-green-500 hover:underline">check our forum</a>.
+        </motion.p>
+        
+        <motion.form 
+          onSubmit={handleSubmit} 
+          className="mb-10 bg-white p-6 rounded-xl shadow-md border border-gray-100"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <motion.input
+              type="text"
+              placeholder="Your name"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            />
+            <motion.input
+              type="email"
+              placeholder="Your email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+            />
+          </div>
+          
+          <motion.textarea
+            placeholder="Write a comment (use Ctrl+Enter to send)"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px] mb-4"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            onKeyDown={handleKeyDown}
+            required
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+          ></motion.textarea>
+          
+          <motion.button 
+            type="submit"
+            className="bg-[#7B68EE] hover:bg-[#6A5ACD] text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Send
+          </motion.button>
+        </motion.form>
+        
+        <motion.div 
+          className="space-y-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          {comments.map((comment, index) => (
+            <motion.div 
+              key={comment.id} 
+              className="flex gap-4 bg-white p-5 rounded-xl shadow-md border border-indigo-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
+            >
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-medium text-gray-900">{comment.name}</span>
+                  <span className="text-gray-500 text-sm">{comment.date}</span>
+                </div>
+                <p className="text-gray-700 mb-2">{comment.text}</p>
+                <motion.button 
+                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Reply
+                </motion.button>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+const ChatbotComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [newMessage, setNewMessage] = useState('');
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      sender: 'agent',
+      name: 'Annie',
+      text: 'Hello,\n\nIf you need any help browsing our website just shout.\n\nBtw I\'m Annie.',
+      time: '7:22pm',
+      avatar: 'https://randomuser.me/api/portraits/women/32.jpg'
+    }
+  ]);
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newMessage.trim()) {
+      const userMessage = {
+        id: messages.length + 1,
+        sender: 'user',
+        name: 'James',
+        text: newMessage,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
+      };
+      setMessages([...messages, userMessage]);
+      setNewMessage('');
+      
+      // Simulate agent response after a short delay
+      setTimeout(() => {
+        const agentResponse = {
+          id: messages.length + 2,
+          sender: 'agent',
+          name: 'Annie',
+          text: 'Thanks for your message! How can I help you today?',
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          avatar: 'https://randomuser.me/api/portraits/women/32.jpg'
+        };
+        setMessages(prevMessages => [...prevMessages, agentResponse]);
+      }, 1000);
+    }
+  };
+
+  return (
+    <>
+      {/* Chat button */}
+      {!isOpen && (
+        <button 
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-5 right-5 w-16 h-16 bg-purple-600 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-purple-700 transition-all duration-300"
+        >
+          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+          </svg>
+        </button>
+      )}
+
+      {/* Chat window */}
+      {isOpen && (
+        <div className="fixed bottom-5 right-5 w-[350px] h-[500px] bg-white rounded-lg shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200">
+          {/* Header */}
+          <div className="bg-purple-600 p-4 flex items-center justify-between relative z-10">
+            <div className="flex items-center">
+              <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                <img 
+                  src="https://randomuser.me/api/portraits/women/32.jpg" 
+                  alt="Annie Smith" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-white font-medium">Annie Smith</span>
+            </div>
+            <button 
+              onClick={() => setIsOpen(false)} 
+              className="text-white hover:bg-purple-700 rounded-full w-8 h-8 flex items-center justify-center transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Messages container with hidden scrollbar */}
+          <div 
+            className="flex-1 overflow-y-auto p-4 space-y-4 relative z-10" 
+            style={{ 
+              msOverflowStyle: 'none', 
+              scrollbarWidth: 'none' 
+            }}
+          >
+            {messages.map((message) => (
+              <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+                {message.sender === 'agent' && (
+                  <div className="w-8 h-8 rounded-full overflow-hidden mr-2 flex-shrink-0 mt-1">
+                    <img src={message.avatar} alt={message.name} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                <div 
+                  className={`max-w-[70%] p-3 rounded-lg ${
+                    message.sender === 'user' 
+                      ? 'bg-white border border-gray-200'
+                      : 'bg-blue-50'
+                  }`}
+                >
+                  <p className="text-gray-800 text-sm whitespace-pre-line">{message.text}</p>
+                  <div className="text-right mt-1">
+                    <span className="text-gray-400 text-xs">{message.time}</span>
+                  </div>
+                </div>
+                {message.sender === 'user' && (
+                  <div className="w-8 h-8 rounded-full overflow-hidden ml-2 flex-shrink-0 mt-1">
+                    <img src={message.avatar} alt={message.name} className="w-full h-full object-cover" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* Input form */}
+          <form onSubmit={handleSendMessage} className="p-3 border-t border-gray-200 bg-white relative z-10">
+            <div className="flex items-center">
+              <input
+                type="text"
+                placeholder="Hi Annie,"
+                className="flex-1 border border-gray-300 rounded-l-lg py-2 px-3 focus:outline-none focus:ring-1 focus:ring-purple-500"
+                value={newMessage}
+                onChange={(e) => setNewMessage(e.target.value)}
+              />
+              <button
+                type="submit"
+                className="bg-white border border-gray-300 border-l-0 rounded-r-lg p-2 text-gray-500 hover:text-gray-700"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                className="ml-2 text-gray-500 hover:text-gray-700"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+    </>
+  );
+};
+
+
 
 const LandingPage = () => {
   return (
@@ -1852,8 +2179,10 @@ const LandingPage = () => {
       <IntegrationsSection />
       <FeaturesSection />
       <ReviewsSection />
-      <PricingSection />
       <TrialRequestSection />
+      <PricingSection />
+      <CommentsSection />
+      <ChatbotComponent />
       <Footer />
     </>
   );
